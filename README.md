@@ -22,7 +22,7 @@ This mystery method is performing the following operation:
 ```ruby
 function1.call(function2.call(x))
 ```
-Which is a composition of functions. For this reason the method could be called function composition. Additionally, it could be re written like:
+Which is a composition of functions. For this reason the method could be called function composition. Additionally, it could also be written like:
 ```ruby
 def function_composition(*functions)
   functions.reduce { |f,g| lambda { |x| g.call(f.call(x)) } }
